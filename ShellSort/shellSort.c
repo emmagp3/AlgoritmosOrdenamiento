@@ -1,7 +1,7 @@
 /** 
  * @file shellSort.c
  * @author Valentin Ramos Emmanuel Guadalupe (evalentinr1700@alumno.ipn.mx)
- * @version 1.0
+ * @version 2.0
  * @date 2022-03-06
  * 
  * @copyright Copyright (c) 2022
@@ -9,18 +9,18 @@
  */
 #include <stdio.h>
 #include <math.h>
+#include "../Utils/archivos.h"
+#include "../Utils/utils.h"
 
 void shell(int[], int);
 
 int main(void) {
-  int arr[] = {100, 2, 5, 8, 99, 0};
-  int n = sizeof(arr) / sizeof(int);
+  int n;
+  leerCantidadDeNumeros(&n);
+  int arr[] = leerNumeros(n);
   shell(arr, n);
+  imprimirArreglo(arr, &n);
 
-  int a;
-  for (a = 0; a < n; a++) {
-    printf("%d\n", arr[a]);
-  }
   return 0;
 }
 
