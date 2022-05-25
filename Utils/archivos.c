@@ -11,13 +11,6 @@
 #include <stdlib.h>
 #include "archivos.h"
 
-/** 
- * Crea una arreglo de n elementos
- * 
- * @param n Cantidad a elementos a leer del archivo
- * @return Apuntador que funciona como arreglo del tipo: tipo_dato.
- * Nota: tipo_dato es definido como entero, pero puede cambiarse según las necesidades y contexto del problema a resolver. 
- */
 tipo_dato* leerNumeros(int n) {
   FILE *fp;
   int i = 0, numero, *arr;

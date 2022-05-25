@@ -37,14 +37,8 @@ int main(void) {
   free(arr);
 
   clock_t endReal = clock();
-
-  double realTime = (double) (endReal - startReal) / CLOCKS_PER_SEC;
-  double CPUtime = (double) (endCPU - startCPU) / CLOCKS_PER_SEC;
-  double EStime = (double) ((endE - startE) + (endS - startS)) / CLOCKS_PER_SEC;
-  printf("Tiempo real: %lfs\n", realTime);
-  printf("Tiempo CPU: %lfs\n", CPUtime);
-  printf("Tiempo E/S: %lfs\n", EStime);
-  printf("CPU/Wall: %lf\n", CPUtime / realTime);
+  
+  imprimirTiempos(startReal, startE, startCPU, startS, endReal, endE, endCPU, endS);
   return 0;
 }
 
